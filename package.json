@@ -1,6 +1,6 @@
 {
   "name": "tsconfig.json-helper",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "TsConfig.json files serving as boilerplate for multiple frameworks like React, NodeJs and React Native",
   "main": "src/index.js",
   "bin": "src/index.js",
