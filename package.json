@@ -1,6 +1,6 @@
 {
   "name": "tsconfig.json-helper",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "TsConfig.json files serving as boilerplate for multiple frameworks like React, NodeJs and React Native",
   "main": "src/index.js",
   "bin": "src/index.js",
@@ -29,5 +29,5 @@
   "bugs": {
     "url": "https://github.com/Daim-Nickel-Penny/Node-Package-Manager-CLI-/issues"
   },
-  "homepage": ""
+  "homepage": "https://github.com/Daim-Nickel-Penny/Node-Package-Manager-CLI-#README.md"
 }
