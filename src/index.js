@@ -1,15 +1,29 @@
 const inquirer = require("inquirer");
+const { writeFileSync } = require("fs");
+
+const tsconfigs = {
+  react: JSON.stringify(require("./config/tsconfig.react.json"), null, 2),
+  "react-native": JSON.stringify(
+    require("./config/tsconfig.react-native.json"),
+    null,
+    2
+  ),
+  node: JSON.stringify(require("./config/tsconfig.react-native.json"), null, 2),
+};
 
 inquirer
   .prompt([
     {
       type: "list",
-      message: "Choose Your FrameWork: ",
-      name: "framwork",
+      message: "Pick the framework your using:",
+      name: "framework",
       choices: ["react", "react-native", "node"],
     },
   ])
-  .then((answers) => {
-    answers.framework;
-    //console.log(answers);
+  .then(({ framework }) => {
+    const tsconfigToWrite = tsconfigs[framework];
+
+    const cwd = process.cwd();
+    writeFileSync(cwd + "/tsconfig.json", tsconfigToWrite);
+    console.log("tsconfig.json successfully created");
   });
